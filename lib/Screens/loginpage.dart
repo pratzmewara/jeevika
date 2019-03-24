@@ -6,6 +6,7 @@ import 'dart:io';
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:jeevika/Screens/homepage.dart';
 import 'package:flutter/foundation.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -315,7 +316,7 @@ Widget FormUI() {
                     shape: new RoundedRectangleBorder(
                         borderRadius: new BorderRadius.circular(30.0)),
                     color: Colors.orange,
-                    onPressed: () => _login_Server(),
+                    onPressed: () => gotoHomePage(),
                     child: new Container(
                       padding: const EdgeInsets.symmetric(
                         vertical: 20.0,
@@ -344,9 +345,9 @@ Widget FormUI() {
 
  _login_Server() {
 
-     if(_key.currentState.validate())
-     {
-        _key.currentState.save();
+    //  if(_key.currentState.validate())
+    //  {
+    //     _key.currentState.save();
      
      
 
@@ -426,13 +427,17 @@ Widget FormUI() {
 //         _validate = true;
 //         });
     
-   }
+ //  }
 
     
      
   
     
   }
+  void gotohome(){
+  
+          Navigator.of(context).pushReplacementNamed('/homepage');
+}
  
 
   Widget SignupPage(BuildContext context) {
