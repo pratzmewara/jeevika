@@ -13,6 +13,11 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  shared_preferences: ^0.5.1+1
+  barcode_scan: ^0.0.8
+  fluttertoast: ^2.1.4
+  path_provider: 0.4.1
+  flip_card: ^0.2.1
   flutter:
     sdk: flutter
 
@@ -23,6 +28,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  http: ^0.12.0+1
+  query_params: '^0.6.1'
 
 
 # For information on the generic Dart part of this file, see the
@@ -52,6 +59,15 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+    - family: Lobster
+      fonts:
+        - asset: fonts/Lobster-Regular.ttf
+          weight: 700
+    - family: Raleway
+      fonts:
+        - asset: fonts/Raleway-Black.ttf
+          weight: 300
   # fonts:
   #   - family: Schyler
   #     fonts:
