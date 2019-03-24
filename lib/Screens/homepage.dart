@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jeevika/Screens/servicepage.dart';
 
 
 class MyHomePage extends StatefulWidget {
@@ -10,6 +11,15 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  void _service(){
+     Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>ServicePage(),
+                      ),
+                    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +74,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                 
                               ]
                             )
-                          ))
+                          )),
+                          onTap: _service,
                 ),
                  GestureDetector( child: Container(
                   margin: EdgeInsets.only(right: 16,left: 16,top: 16),
@@ -94,7 +105,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         child:Text("Cleaning")),flex: 10,)
                               ]
                             )
-                          ))
+                          )),
+                          onTap: _service,
                 ),
 
                 GestureDetector( child: Container(
@@ -133,7 +145,8 @@ Icon(Icons.fastfood,size: 20.0,color: Colors.white,)
                                 
                               ]
                             )
-                          ))
+                          )),
+                          onTap: _service,
                 )
               ],
             )
